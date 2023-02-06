@@ -3,30 +3,97 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+  body {
+    background-color: lavender;
+    font-family: sans-serif;
+    color: gray;
+  }
+
+  .header {
+    background-color: steelblue;
+    color: orange;
+    text-align: center;
+    padding: 20px;
+  }
+
+  h2.header-title {
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -16px;
+  }
+
+  .column {
+    flex: 25%;
+    padding: 0 16px;
+    background-color: pink;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 2px gray;
+  }
+
+  h2.section-title {
+    color:  bold steelblue;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  p.section-desc {
+      color :  gray;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  @media (max-width: 600px) {
+    .column {
+      flex: 100%;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .header-title {
+      font-size: 26px;
+    }
+
+    .section-title {
+      font-size: 22px;
+    }
+  }
+</style>
+</head>
   <body>
-    <h2>Responsive Web Page</h2>
-    <p>Resize the browser window to see the responsive effect.</p>
-    <p>The columns will automatically adjust themselves when the screen is less than 600px wide.</p>
-    <div class="row">
-      <div class="column" style="background-color:#aaa;">
-        <h2>Section 1</h2>
-        <p>hey my name is alok garg</p>
-      </div>
-      <div class="column" style="background-color:#bbb;">
-        <h2>Section 2</h2>
-        <p>i am from jaipur .</p>
-      </div>
+    <div class="header">
+      <h2 class="header-title">Alok-resposnsive webpage</h2>
+      <p>Resize the browser window to see the responsive effect.</p>
     </div>
     <div class="row">
-      <div class="column" style="background-color:#ccc;">
-        <h2>Section 3</h2>
-        <p>if you had any query please let me know </p>
+      <div class="column">
+        <h2 class="section-title">Section 1</h2>
+        <p class="section-desc">Hey my name is Alok Garg</p>
       </div>
-      <div class="column" style="background-color:#ddd;">
-        <h2>Section 4</h2>
-        <p>by by take care .</p>
+      <div class="column">
+        <h2 class="section-title">Section 2</h2>
+        <p class="section-desc">I am from Jaipur.</p>
+      </div>
+      <div class="column">
+        <h2 class="section-title">Section 3</h2>
+        <p class="section-desc">If you have any queries, please let me know.</p>
+      </div>
+      <div class="column">
+        <h2 class="section-title">Section 4</h2>
+        <p class="section-desc">Bye, take care.</p>
       </div>
     </div>
   </body>
 </html>
+
+
